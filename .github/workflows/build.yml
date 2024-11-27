@@ -44,6 +44,7 @@ jobs:
         git checkout -b dist || git checkout dist
 
         # Add and commit the updated build files
+        cd ../addons
         git add .
         git commit -m "Automated build and distribution of addons"
 

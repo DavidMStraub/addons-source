@@ -29,12 +29,11 @@ jobs:
     - name: Build Addons
       run: |
         export LANGUAGE=en_US.UTF-8
-        python3 make.py gramps52 init all          # Initialize all addons
-        python3 make.py gramps52 update        # Update translations
-        python3 make.py gramps52 compile all       # Compile .po to .mo files
-        python3 make.py gramps52 build all         # Build addons
-        python3 make.py gramps52 listing all       # Update listings
-        python3 make.py gramps52 as-needed         # Ensure everything is up to date
+        python3 make.py gramps52 init all
+        python3 make.py gramps52 compile all
+        python3 make.py gramps52 build all
+        python3 make.py gramps52 listing all
+        python3 make.py gramps52 as-needed
     - name: Commit and Push to dist Branch
       run: |
         # Configure Git

@@ -43,8 +43,11 @@ jobs:
         # Create or switch to the 'dist' branch
         git checkout -b dist || git checkout dist
 
+        # Replace the content of the current directory with the contents of ../addons
+        rm -rf -- *
+        cp -r ../addons/* ./
+
         # Add and commit the updated build files
-        cd ../addons
         git add .
         git commit -m "Automated build and distribution of addons"
 

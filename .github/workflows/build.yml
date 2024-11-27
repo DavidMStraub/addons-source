@@ -30,7 +30,7 @@ jobs:
       run: |
         export LANGUAGE=en_US.UTF-8
         python3 make.py gramps52 init all          # Initialize all addons
-        python3 make.py gramps52 update all        # Update translations
+        python3 make.py gramps52 update        # Update translations
         python3 make.py gramps52 compile all       # Compile .po to .mo files
         python3 make.py gramps52 build all         # Build addons
         python3 make.py gramps52 listing all       # Update listings
